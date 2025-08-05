@@ -3,7 +3,7 @@
 A bash script to detect suspicious `sudo` or `su` commands (e.g., `useradd`, `rm`) in `/var/log/auth.log` that may indicate privilege escalation attempts.
 
 ## Usage
-1. Ensure `config.sh` with `AUTH_LOG` and `ALERTS_LOG`.
+1. Ensure `config.sh` is available with `AUTH_LOG` (e.g., `/var/log/auth.log`) and `ALERTS_LOG` (e.g., `alerts/alerts.log`).
 2. Run:
    ```bash
    sudo ./priv_escalation.sh
