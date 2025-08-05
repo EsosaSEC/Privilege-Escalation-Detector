@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Privilege escalation detector
+# Configuration file
 source ./config.sh
 
 # Check if log file exists
