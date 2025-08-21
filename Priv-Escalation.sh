@@ -23,7 +23,7 @@ fi  # Ends the if condition for checking the log file.
 # Look for suspicious sudo or su activity
 
 suspicious_activity=$(grep -a -E "sudo:.*COMMAND=|su:.*to root" "$AUTH_LOG" | \
-    tail -n 50 | grep -v "cron" | grep -E "rm |passwd|useradd|usermod|groupadd|chmod|chown")  # Searches for sudo or su commands in the last 50 lines of the auth log, excluding cron, and filters for suspicious commands.
+    tail -n 10 | grep -v "cron" | grep -E "rm |passwd|useradd|usermod|groupadd|chmod|chown")  # Searches for sudo or su commands in the last 50 lines of the auth log, excluding cron, and filters for suspicious commands.
 
 # Generate alerts
 
